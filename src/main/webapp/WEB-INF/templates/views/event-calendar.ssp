@@ -12,3 +12,31 @@
         <li><%= fEvent._id  %>  <%= fEvent.eventDate  %> <%= fEvent.eventName  %></li>
     #end
 </ul>
+
+<script>
+    $(document).ready(function() {
+        $('#calendar').fullCalendar({
+        // put your options and callbacks here
+            height: 350,
+            theme: true,
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            disableDragging: true,
+            editable: true
+        })
+    });
+</script>
+
+<style>
+    #calendar
+    {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+</style>
+
+<div id='calendar'></div>
