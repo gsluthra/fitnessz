@@ -1,0 +1,11 @@
+<%@ val title: String = "FitnessZ" %>
+<%@ val body: String %>
+
+<html>
+    <head>
+        <title><%=title%></title>
+    </head>
+    <body>
+        <%= unescape(body) %>
+    </body>
+</html>

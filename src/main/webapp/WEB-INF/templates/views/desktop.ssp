@@ -1,0 +1,3 @@
+<%@ val welcomeText: String%>
+
+<h1> <%= welcomeText %> </h1>

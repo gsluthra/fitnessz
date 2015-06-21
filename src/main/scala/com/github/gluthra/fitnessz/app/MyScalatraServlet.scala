@@ -6,15 +6,18 @@ import scalate.ScalateSupport
 class MyScalatraServlet extends FitnesszStack {
 
   get("/") {
-    <html>
-      <head>
-        <title>FitnessZ</title>
-      </head>
-      <body>
-        <h1>Hello, world. Sample scalatra application!</h1>
-        Say <a href="hello-scalate">hello to FitnessZ sample application</a>.
-      </body>
-    </html>
+    contentType="text/html"
+    ssp("desktop.ssp", "welcomeText" -> "Hello to FitnessZ")
+
+  }
+
+  get("/:user/events") {
+
+    val user = params("user")
+    val content = new EventService().getEventsForUser(user)
+
+    contentType="text/html"
+    ssp("hello-scalate.ssp", "username" -> user)
   }
 
 }
