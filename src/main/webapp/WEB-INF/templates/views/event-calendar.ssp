@@ -20,14 +20,24 @@
             },
             disableDragging: true,
             editable: true,
+
+            dayClick: function(date, jsEvent, view) {
+                alert('Clicked on: ' + date.format());
+            },
+
+            eventClick: function(calEvent, jsEvent, view) {
+                alert('Event: ' + calEvent.title);
+                alert('StartDate: ' + calEvent.start.format());
+            },
+
             events: [
-            #for (fEvent <- events)
-                {
-                    title: '<%= fEvent.eventName  %>',
-                    start: '<%= fEvent.eventDate %>',
-                    allDay: true
-                },
-            #end
+                #for (fEvent <- events)
+                    {
+                        title: '<%= fEvent.eventName  %>',
+                        start: '<%= fEvent.eventDate %>',
+                        allDay: true
+                    },
+                #end
             ]
         })
     });
