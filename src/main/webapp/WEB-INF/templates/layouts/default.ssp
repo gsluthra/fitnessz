@@ -3,9 +3,14 @@
 
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><%=title%></title>
+        <link href="/public/bootstrap-yeti.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <%= unescape(body) %>
+        <script src="/public/jquery-1.11.3.min.js"></script>
+        <script src="/public/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
     </body>
 </html>
