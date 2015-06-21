@@ -3,12 +3,12 @@
 %>
 
 <%@ val username: String = "No User!!" %>
-<%@ val events: Seq[FitnessEvent] = Seq.empty[FitnessEvent] %>
+<%@ val events: List[FitnessEvent] = List.empty[FitnessEvent] %>
 
 <p> Hello, <%= username %> </p>
 
 <ul>
     #for (fEvent <- events)
-        <li><%= fEvent.eventID  %>  <%= fEvent.eventDate  %> <%= fEvent.eventName  %></li>
+        <li><%= fEvent._id  %>  <%= fEvent.eventDate  %> <%= fEvent.eventName  %></li>
     #end
 </ul>

@@ -17,4 +17,12 @@ class MyScalatraServlet extends FitnesszStack {
     ssp("event-calendar.ssp", "username" -> user, "events" -> eventContent)
   }
 
+  get("/:user/event/create") {
+
+    val user = params("user")
+    new EventService().createEventForUser(user)
+
+    redirect(url("/"+user+"/events"))
+  }
+
 }

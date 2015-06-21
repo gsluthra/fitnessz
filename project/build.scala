@@ -32,7 +32,8 @@ object FitnesszBuild extends Build {
         "javax.servlet" % "javax.servlet-api" % "3.1.0",
         "org.mongodb" %% "casbah" % "2.7.2",
         "org.json4s" %% "json4s-jackson" % "3.2.10",
-        "org.json4s" %% "json4s-mongo" % "3.2.10"
+        "org.json4s" %% "json4s-mongo" % "3.2.10",
+        "com.novus" %% "salat" % "1.9.9"
       ),
       scalateTemplateConfig in Compile <<= (sourceDirectory in Compile){ base =>
         Seq(
