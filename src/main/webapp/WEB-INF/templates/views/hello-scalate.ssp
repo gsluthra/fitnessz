@@ -1,3 +1,0 @@
-<%@ val username: String = "No User!!" %>
-
-<p> Hello, <%= username %> </p>

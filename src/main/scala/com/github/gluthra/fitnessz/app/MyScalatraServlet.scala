@@ -1,8 +1,5 @@
 package com.github.gluthra.fitnessz.app
 
-import org.scalatra._
-import scalate.ScalateSupport
-
 class MyScalatraServlet extends FitnesszStack {
 
   get("/") {
@@ -14,10 +11,10 @@ class MyScalatraServlet extends FitnesszStack {
   get("/:user/events") {
 
     val user = params("user")
-    val content = new EventService().getEventsForUser(user)
+    val eventContent = new EventService().getEventsForUser(user)
 
     contentType="text/html"
-    ssp("hello-scalate.ssp", "username" -> user)
+    ssp("event-calendar.ssp", "username" -> user, "events" -> eventContent)
   }
 
 }

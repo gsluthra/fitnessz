@@ -1,0 +1,14 @@
+<%
+    import com.github.gluthra.fitnessz.app.models.FitnessEvent
+%>
+
+<%@ val username: String = "No User!!" %>
+<%@ val events: Seq[FitnessEvent] = Seq.empty[FitnessEvent] %>
+
+<p> Hello, <%= username %> </p>
+
+<ul>
+    #for (fEvent <- events)
+        <li><%= fEvent.eventID  %>  <%= fEvent.eventDate  %> <%= fEvent.eventName  %></li>
+    #end
+</ul>
