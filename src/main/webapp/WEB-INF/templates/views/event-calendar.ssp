@@ -9,7 +9,7 @@
 
 <script>
     $(document).ready(function() {
-        $('#calendar').fullCalendar({
+        var calendar = $('#calendar').fullCalendar({
         // put your options and callbacks here
             height: 350,
             theme: false,
@@ -22,12 +22,22 @@
             editable: true,
 
             dayClick: function(date, jsEvent, view) {
-                alert('Clicked on: ' + date.format());
-            },
+                //alert('Clicked on: ' + date.format());
+                calendar.fullCalendar('renderEvent',
+                                        {
+                                        title: "HIIT",
+                                        start: date,
+                                        allDay: true
+                                        },
+                                        true // make the event "stick"
+                );
+
+    },
 
             eventClick: function(calEvent, jsEvent, view) {
-                alert('Event: ' + calEvent.title);
-                alert('StartDate: ' + calEvent.start.format());
+//                alert('Event: ' + calEvent.title);
+//                alert('StartDate: ' + calEvent.start.format());
+                calendar.fullCalendar('removeEvents', calEvent._id);
             },
 
             events: [
