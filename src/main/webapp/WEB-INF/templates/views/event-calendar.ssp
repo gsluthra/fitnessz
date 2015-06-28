@@ -84,7 +84,7 @@
                     </a>
                 </div>
                 <h3>Exercise</h3>
-                <a class="btn btn-default" href="#"><i class="fa fa-check-circle-o fa-lg"></i> Yes</a>
+                <a id="yesToExerciseBtn" class="btn btn-default" href="#" ><i class="fa fa-check-circle-o fa-lg"></i> Yes</a>
                 <a class="btn btn-default" href="#"><i class="fa fa-times-circle-o fa-lg"></i> No </a>
                 <a class="btn btn-default" href="#"><i class="fa fa-trash-o fa-lg"></i> Clear </a>
 
