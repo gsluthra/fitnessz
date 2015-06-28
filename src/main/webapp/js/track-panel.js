@@ -47,6 +47,20 @@ function resetAllExerciseButtons() {
     //TODO: also need to trigger event clearning from backend
 }
 
+function resetAllFoodButtons() {
+    $("#healthyFoodBtn").removeClass("btn-success");
+    $("#healthyFoodBtn").addClass("btn-default");
+
+    $("#normalFoodBtn").removeClass("btn-warning");
+    $("#normalFoodBtn").addClass("btn-default");
+
+    $("#badFoodBtn").removeClass("btn-danger");
+    $("#badFoodBtn").addClass("btn-default");
+
+    //TODO: also need to trigger event clearning from backend
+}
+
+//ON READY REGISTER EVENT LISTENERS
 $(document).ready(function() {
     dayTrackEvent.setSelectedDateToNow();
 
@@ -68,5 +82,32 @@ $(document).ready(function() {
 
     $("#clearAllExerciseBtn").on("click",function () {
         resetAllExerciseButtons();
+     });
+
+
+
+    $("#healthyFoodBtn").on("click",function () {
+        resetAllFoodButtons();
+        var $yesButton = $("#healthyFoodBtn");
+        $yesButton.removeClass("btn-default");
+        $yesButton.addClass("btn-success");
+     });
+
+    $("#normalFoodBtn").on("click",function () {
+        resetAllFoodButtons();
+        var $yesButton = $("#normalFoodBtn");
+        $yesButton.removeClass("btn-default");
+        $yesButton.addClass("btn-warning");
+     });
+
+    $("#badFoodBtn").on("click",function () {
+        resetAllFoodButtons();
+        var $yesButton = $("#badFoodBtn");
+        $yesButton.removeClass("btn-default");
+        $yesButton.addClass("btn-danger");
+     });
+
+    $("#clearnAllFoodBtn").on("click",function () {
+        resetAllFoodButtons();
      });
  });

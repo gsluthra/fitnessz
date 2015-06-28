@@ -91,10 +91,12 @@
                 </div>
 
                 <h3>Food</h3>
-                <a class="btn btn-default" href="#"><i class="fa fa-heart fa-lg"></i> Healthy</a>
-                <a class="btn btn-default" href="#"><i class="fa fa-leaf fa-lg"></i> Normal </a>
-                <a class="btn btn-default" href="#"><i class="fa fa-thumbs-down fa-lg"></i> Bad </a>
-                <a class="btn btn-default" href="#"><i class="fa fa-trash-o fa-lg"></i> Clear </a>
+                <div id="foodButtons"       class="btn-group" role="group">
+                    <a id="healthyFoodBtn"  class="btn btn-default" href="#"><i class="fa fa-heart fa-lg"></i> Healthy</a>
+                    <a id="normalFoodBtn"   class="btn btn-default" href="#"><i class="fa fa-leaf fa-lg"></i> Normal </a>
+                    <a id="badFoodBtn"      class="btn btn-default" href="#"><i class="fa fa-thumbs-down fa-lg"></i> Bad </a>
+                    <a id="clearnAllFoodBtn" class="btn btn-default" href="#"><i class="fa fa-trash-o fa-lg"></i> Clear </a>
+                </div>
 
                 <h3>Notes</h3>
                 <textarea class="form-control" rows="6"></textarea>
