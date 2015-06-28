@@ -60,42 +60,66 @@
         float: left;
     }
 
-    #right-side-frame
+    #exercise-panel
+    {
+        margin: 80px auto;
+    }
+
+    #food-panel
     {
         margin: 80px auto;
     }
 
 </style>
 
-<div class="page-header container">
-    <h1>FitnessZ</h1>
-</div>
+<div class="container">
+    <div class="page-header">
+        <h1>FitnessZ</h1>
+    </div>
 
 <div class="row">
-    <div class="col-md-1"></div>
-
     <div class="col-md-5">
         <div id='calendar'></div>
     </div>
     <div class="col-md-3">
-        <div id="right-side-frame" class="panel panel-default">
+        <div id="exercise-panel" class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title" align="left">
-                        <span class="label label-warning"><strong>28-June-2015</strong></span>
-                        <span class="label label-info">Sunday</span>
+                <span class="label label-success">Exercise</span>
                 </h3>
             </div>
             <div class="panel-body">
-                <h3>Exercise </h3>
                 <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Yes I did it!</button>
                 <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No I could not </button>
-                <h3>Food </h3>
-                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Healthy</button>
-                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> Normal </button>
-                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Bad </button>
-
             </div>
         </div>
     </div>
-    <div class="col-md-3"></div>
+
+    <div class="col-md-4">
+        <div id="food-panel" class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title" align="left">
+                    <span class="label label-info">Food</span>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Healthy</button>
+                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> Normal </button>
+                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Bad </button>
+            </div>
+        </div>
+
+        <div id="notes-panel" class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title" align="left">
+                    <span class="label label-warning">Notes for the Day</span>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <textarea class="form-control" rows="6"></textarea>
+            </div>
+        </div>
+
+    </div>
+</div>
 </div>
