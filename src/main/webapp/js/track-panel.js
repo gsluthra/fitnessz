@@ -8,6 +8,11 @@ var dayTrackEvent = (function () {
 
     return {
         // PUBLIC FUNCTIONS
+
+        setSelectedDateToNow: function(){
+            currentSelectedDate = moment();
+        },
+
         storeCurrentDate: function( momentDate ) {
             currentSelectedDate = momentDate;
         },
@@ -32,11 +37,36 @@ function setDateSelected(momentDate) {
     $("#dateSelected").text(dayTrackEvent.getDateForDisplay());
 }
 
+function resetAllExerciseButtons() {
+    $("#yesToExerciseBtn").removeClass("btn-success");
+    $("#yesToExerciseBtn").addClass("btn-default");
+
+    $("#noToExerciseBtn").removeClass("btn-danger");
+    $("#noToExerciseBtn").addClass("btn-default");
+
+    //TODO: also need to trigger event clearning from backend
+}
+
 $(document).ready(function() {
+    dayTrackEvent.setSelectedDateToNow();
+
     $("#yesToExerciseBtn").on("click",function () {
+        resetAllExerciseButtons();
         console.log("Yes clicked for date: " + dayTrackEvent.getDateOnly());
         var $yesButton = $("#yesToExerciseBtn");
         $yesButton.removeClass("btn-default");
         $yesButton.addClass("btn-success");
+     });
+
+    $("#noToExerciseBtn").on("click",function () {
+        resetAllExerciseButtons();
+        console.log("No clicked for date: " + dayTrackEvent.getDateOnly());
+        var $noButton = $("#noToExerciseBtn");
+        $noButton.removeClass("btn-default");
+        $noButton.addClass("btn-danger");
+     });
+
+    $("#clearAllExerciseBtn").on("click",function () {
+        resetAllExerciseButtons();
      });
  });
