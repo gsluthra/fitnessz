@@ -60,16 +60,40 @@
         float: left;
     }
 
-    #exercise-panel
-    {
-        margin: 80px auto;
+    .btn-custom-red {
+        background-color: hsl(0, 69%, 16%) !important;
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ce2525", endColorstr="#440c0c");
+        background-image: -khtml-gradient(linear, left top, left bottom, from(#ce2525), to(#440c0c));
+        background-image: -moz-linear-gradient(top, #ce2525, #440c0c);
+        background-image: -ms-linear-gradient(top, #ce2525, #440c0c);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ce2525), color-stop(100%, #440c0c));
+        background-image: -webkit-linear-gradient(top, #ce2525, #440c0c);
+        background-image: -o-linear-gradient(top, #ce2525, #440c0c);
+        background-image: linear-gradient(#ce2525, #440c0c);
+        border-color: #440c0c #440c0c hsl(0, 69%, 8%);
+        color: #fff !important;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.52);
+        -webkit-font-smoothing: antialiased;
     }
 
-    #food-panel
-    {
-        margin: 80px auto;
-    }
 
+    .btn-custom-green {
+        background-color: hsl(145, 62%, 68%) !important;
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdf3dd", endColorstr="#7adfa4");
+        background-image: -khtml-gradient(linear, left top, left bottom, from(#cdf3dd), to(#7adfa4));
+        background-image: -moz-linear-gradient(top, #cdf3dd, #7adfa4);
+        background-image: -ms-linear-gradient(top, #cdf3dd, #7adfa4);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cdf3dd), color-stop(100%, #7adfa4));
+        background-image: -webkit-linear-gradient(top, #cdf3dd, #7adfa4);
+        background-image: -o-linear-gradient(top, #cdf3dd, #7adfa4);
+        background-image: linear-gradient(#cdf3dd, #7adfa4);
+        border-color: #7adfa4 #7adfa4 hsl(145, 62%, 63%);
+        color: #333 !important;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+        -webkit-font-smoothing: antialiased;
+    }
 </style>
 
 <div class="container">
@@ -81,41 +105,26 @@
     <div class="col-md-5">
         <div id='calendar'></div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-7">
         <div id="exercise-panel" class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title" align="left">
-                <span class="label label-success">Exercise</span>
-                </h3>
-            </div>
             <div class="panel-body">
-                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Yes I did it!</button>
-                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No I could not </button>
-            </div>
-        </div>
-    </div>
+                <div align="left">
+                <a class="btn btn-me btn-success" href="#">
+                    <i class="fa fa-calendar fa-2x pull-left"></i> 28-Jun-2015 (Sun)
+                    </a>
+                </div>
+                <h3>Exercise</h3>
+                <a class="btn btn-default" href="#"><i class="fa fa-check-circle-o fa-lg"></i> Yes</a>
+                <a class="btn btn-default" href="#"><i class="fa fa-times-circle-o fa-lg"></i> No </a>
+                <a class="btn btn-default" href="#"><i class="fa fa-trash-o fa-lg"></i> Clear </a>
 
-    <div class="col-md-4">
-        <div id="food-panel" class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title" align="left">
-                    <span class="label label-info">Food</span>
-                </h3>
-            </div>
-            <div class="panel-body">
-                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Healthy</button>
-                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> Normal </button>
-                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Bad </button>
-            </div>
-        </div>
+                <h3>Food</h3>
+                <a class="btn btn-default" href="#"><i class="fa fa-heart fa-lg"></i> Healthy</a>
+                <a class="btn btn-default" href="#"><i class="fa fa-leaf fa-lg"></i> Normal </a>
+                <a class="btn btn-default" href="#"><i class="fa fa-thumbs-down fa-lg"></i> Bad </a>
+                <a class="btn btn-default" href="#"><i class="fa fa-trash-o fa-lg"></i> Clear </a>
 
-        <div id="notes-panel" class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title" align="left">
-                    <span class="label label-warning">Notes for the Day</span>
-                </h3>
-            </div>
-            <div class="panel-body">
+                <h3>Notes</h3>
                 <textarea class="form-control" rows="6"></textarea>
             </div>
         </div>

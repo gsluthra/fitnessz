@@ -10,6 +10,7 @@
         <link href="/public/fullcalendar-2.3.2/lib/cupertino/jquery-ui.min.css" type="text/css" rel="stylesheet">
         <link href="/public/fullcalendar-2.3.2/fullcalendar.min.css" type="text/css" rel="stylesheet">
         <link href="/public/fullcalendar-2.3.2/fullcalendar.print.css" type="text/css" rel="stylesheet" media="print">
+        <link rel="stylesheet" href="/public/font-awesome-4.3.0/css/font-awesome.min.css">
 
         <script src="/public/fullcalendar-2.3.2/lib/jquery.min.js"></script>
         <script src="/public/fullcalendar-2.3.2/lib/jquery-ui.custom.min.js"></script>
