@@ -29,6 +29,7 @@
                                         },
                                         true // make the event "stick"
                 );
+                setDateSelected(date)
 
     },
 
@@ -49,6 +50,13 @@
             ]
         })
     });
+
+    function setDateSelected(momentDate) {
+        //Refer to http://momentjs.com/
+        var day = momentDate.format('dddd');
+        var dateString = momentDate.format('LL') + " (" + day + ")";
+        $("#dateSelected").text(dateString);
+    }
 </script>
 
 <style>
@@ -78,8 +86,8 @@
         <div id="exercise-panel" class="panel panel-default">
             <div class="panel-body">
                 <div align="left">
-                <a class="btn btn-me btn-success" href="#">
-                    <i class="fa fa-calendar fa-2x pull-left"></i> 28-Jun-2015 (Sun)
+                    <a class="btn btn-me btn-success" href="#">
+                        <i class="fa fa-calendar fa-2x pull-left"></i> <span id="dateSelected">28-Jun-2015 (Sun)</span>
                     </a>
                 </div>
                 <h3>Exercise</h3>
