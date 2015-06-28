@@ -5,13 +5,11 @@
 <%@ val username: String = "No User!!" %>
 <%@ val events: List[FitnessEvent] = List.empty[FitnessEvent] %>
 
-<p> Hello, <%= username %> </p>
-
 <script>
     $(document).ready(function() {
         var calendar = $('#calendar').fullCalendar({
         // put your options and callbacks here
-            height: 350,
+            height: 372,
             theme: false,
             header: {
                 left: 'prev,next today',
@@ -35,8 +33,8 @@
     },
 
             eventClick: function(calEvent, jsEvent, view) {
-//                alert('Event: ' + calEvent.title);
-//                alert('StartDate: ' + calEvent.start.format());
+                //alert('Event: ' + calEvent.title);
+                //alert('StartDate: ' + calEvent.start.format());
                 calendar.fullCalendar('removeEvents', calEvent._id);
             },
 
@@ -57,9 +55,47 @@
     #calendar
     {
         width: 450px;
-        margin: 0 auto;
+        margin: 10px auto;
+        padding: 20px;
+        float: left;
+    }
+
+    #right-side-frame
+    {
+        margin: 80px auto;
     }
 
 </style>
 
-<div id='calendar'></div>
+<div class="page-header container">
+    <h1>FitnessZ</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-1"></div>
+
+    <div class="col-md-5">
+        <div id='calendar'></div>
+    </div>
+    <div class="col-md-3">
+        <div id="right-side-frame" class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title" align="left">
+                        <span class="label label-warning"><strong>28-June-2015</strong></span>
+                        <span class="label label-info">Sunday</span>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <h3>Exercise </h3>
+                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Yes I did it!</button>
+                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No I could not </button>
+                <h3>Food </h3>
+                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Healthy</button>
+                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> Normal </button>
+                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Bad </button>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
