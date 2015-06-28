@@ -52,12 +52,15 @@
 </script>
 
 <style>
-    #calendar
-    {
+    #calendar {
         width: 450px;
         margin: 10px auto;
         padding: 20px;
         float: left;
+    }
+
+    body {
+        background-color: floralwhite;
     }
 
 </style>
